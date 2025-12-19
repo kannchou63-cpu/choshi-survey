@@ -79,14 +79,14 @@
         <div id="view-survey" class="hidden space-y-8 fade-in">
             <header class="text-center mb-10">
                 <h1 id="txt-title" class="text-3xl font-black text-slate-900 mb-2">利用者アンケート</h1>
-                <p id="txt-subtitle" class="text-slate-500 text-sm">アプリ体験について教えてください。</p>
+                <p id="txt-subtitle" class="text-slate-500 text-sm">ご意見をお聞かせください。</p>
             </header>
 
             <form id="mainForm" class="space-y-8">
                 <!-- 数値スライダーセクション -->
                 <div class="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-8">
                     <div>
-                        <label id="txt-q1" class="block font-bold text-slate-800 mb-6 text-lg">1. 銚子の魅力について理解が深まりましたか？</label>
+                        <label id="txt-q1" class="block font-bold text-slate-800 mb-6 text-lg">1. 銚子の魅力や特徴について理解が深まりましたか？</label>
                         <div class="px-2">
                             <input type="range" id="q1" min="0" max="10" step="1" value="5" oninput="v1.innerText=this.value">
                             <div class="flex justify-between items-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
@@ -98,11 +98,11 @@
                     </div>
 
                     <div class="pt-8 border-t border-slate-50">
-                        <label id="txt-q2" class="block font-bold text-slate-800 mb-6 text-lg">2. 銚子のことをより知りたくなりましたか？</label>
+                        <label id="txt-q2" class="block font-bold text-slate-800 mb-6 text-lg">2. より深く「銚子のことを知りたい」と感じましたか？</label>
                         <div class="px-2">
                             <input type="range" id="q2" min="0" max="10" step="1" value="5" oninput="v2.innerText=this.value">
                             <div class="flex justify-between items-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
-                                <span id="txt-q2-min">変わらない</span>
+                                <span id="txt-q2-min">興味は変わらない</span>
                                 <span class="text-4xl font-black text-sky-600" id="v2">5</span>
                                 <span id="txt-q2-max">強く興味を持った</span>
                             </div>
@@ -110,7 +110,7 @@
                     </div>
 
                     <div class="pt-8 border-t border-slate-50">
-                        <label id="txt-q3" class="block font-bold text-slate-800 mb-6 text-lg">3. 今後もこのアプリを使いたいですか？</label>
+                        <label id="txt-q3" class="block font-bold text-slate-800 mb-6 text-lg">3. 今後も観光の際に、このアプリを継続して利用したいですか？</label>
                         <div class="px-2">
                             <input type="range" id="q3" min="0" max="10" step="1" value="5" oninput="v3.innerText=this.value">
                             <div class="flex justify-between items-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
@@ -120,19 +120,32 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- 追加された質問: 使いやすさ -->
+                    <div class="pt-8 border-t border-slate-50">
+                        <label id="txt-q4" class="block font-bold text-slate-800 mb-6 text-lg">4. このアプリは使いやすかったですか？</label>
+                        <div class="px-2">
+                            <input type="range" id="q4" min="0" max="10" step="1" value="5" oninput="v4.innerText=this.value">
+                            <div class="flex justify-between items-center mt-4 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                <span id="txt-q4-min">使いにくい</span>
+                                <span class="text-4xl font-black text-sky-600" id="v4">5</span>
+                                <span id="txt-q4-max">使いやすい</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- 自由入力セクション -->
                 <div class="bg-white p-6 rounded-[2.5rem] border border-slate-100 shadow-sm space-y-6">
                     <div>
-                        <label id="txt-q4" class="block font-bold text-slate-800 mb-2">4. 旅行ガイド以外で同様の機能を使いたいシーンは？</label>
-                        <p id="txt-q4-sub" class="text-[11px] text-slate-400 mb-4">（例：ゴミ出し日、地域イベント情報など）</p>
-                        <textarea id="q4" rows="3" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-4 focus:ring-sky-100 focus:bg-white transition-all outline-none" placeholder=""></textarea>
+                        <label id="txt-q5" class="block font-bold text-slate-800 mb-2">5. 旅行ガイド以外で同様の機能を使いたいシーンはありますか？</label>
+                        <p id="txt-q5-sub" class="text-[11px] text-slate-400 mb-4">（例：ゴミ出し日の案内、地域イベント情報など）</p>
+                        <textarea id="q5" rows="3" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-4 focus:ring-sky-100 focus:bg-white transition-all outline-none" placeholder=""></textarea>
                     </div>
 
                     <div class="pt-6 border-t border-slate-50">
-                        <label id="txt-q5" class="block font-bold text-slate-800 mb-4">5. その他、改善要望や機能のアイデアを教えてください</label>
-                        <textarea id="q5" rows="4" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-4 focus:ring-sky-100 focus:bg-white transition-all outline-none" placeholder=""></textarea>
+                        <label id="txt-q6" class="block font-bold text-slate-800 mb-4">6. その他、アプリへのご要望や「こんな機能があったら嬉しい」点はありますか？</label>
+                        <textarea id="q6" rows="4" class="w-full p-5 bg-slate-50 border border-slate-200 rounded-3xl focus:ring-4 focus:ring-sky-100 focus:bg-white transition-all outline-none" placeholder=""></textarea>
                     </div>
                 </div>
 
@@ -183,9 +196,17 @@
                         <div id="bar-q3" class="h-full bg-sky-500 transition-all duration-1000 w-0 shadow-inner"></div>
                     </div>
                 </div>
+                <div class="bg-white p-6 rounded-3xl border border-slate-100 shadow-sm">
+                    <div class="flex justify-between items-end mb-3">
+                        <span class="text-[11px] font-black text-slate-400 uppercase tracking-widest">Q4. 操作性平均</span>
+                        <span class="text-3xl font-black text-sky-600" id="avg-q4">0.0</span>
+                    </div>
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden">
+                        <div id="bar-q4" class="h-full bg-sky-500 transition-all duration-1000 w-0 shadow-inner"></div>
+                    </div>
+                </div>
             </div>
 
-            <!-- 回答個別管理 -->
             <div class="pt-10">
                 <h3 class="font-black text-slate-900 text-xl mb-6 flex items-center">
                     <span class="w-2.5 h-8 bg-sky-500 rounded-full mr-4"></span>
@@ -198,8 +219,7 @@
 
     <!-- 各種オーバーレイ -->
     <div id="overlay" class="fixed inset-0 bg-slate-900/70 backdrop-blur-md z-[100] hidden flex items-center justify-center p-6">
-        <!-- パスワード入力 -->
-        <div id="prompt-pw" class="bg-white p-10 rounded-[3rem] w-full max-w-sm text-center shadow-2xl hidden">
+        <div id="prompt-pw" class="bg-white p-10 rounded-[3rem] w-full max-sm:w-full max-w-sm text-center shadow-2xl hidden">
             <h3 class="font-black text-xl mb-6">ADMIN LOGIN</h3>
             <input type="password" id="input-pw" class="w-full p-5 bg-slate-50 border-2 border-slate-100 rounded-2xl mb-6 text-center text-2xl tracking-[0.5em] outline-none focus:border-sky-500 transition-colors" placeholder="••••">
             <div class="flex gap-3">
@@ -208,16 +228,14 @@
             </div>
         </div>
 
-        <!-- 送信完了メッセージ -->
-        <div id="msg-success" class="bg-white p-12 rounded-[3.5rem] w-full max-w-sm text-center shadow-2xl hidden">
+        <div id="msg-success" class="bg-white p-12 rounded-[3.5rem] w-full max-sm:w-full max-w-sm text-center shadow-2xl hidden">
             <div class="w-24 h-24 bg-green-50 text-green-500 rounded-full flex items-center justify-center mx-auto mb-8 text-5xl font-bold shadow-inner animate-bounce">✓</div>
-            <h2 id="txt-success-title" class="text-3xl font-black mb-2">送信しました！</h2>
+            <h2 id="txt-success-title" class="text-3xl font-black mb-2 text-slate-800">送信完了</h2>
             <p id="txt-success-msg" class="text-slate-400 text-sm mb-10 leading-relaxed">ご協力ありがとうございます。</p>
             <button onclick="location.reload()" class="w-full py-5 bg-slate-900 text-white rounded-2xl font-black text-lg">DONE</button>
         </div>
 
-        <!-- QRコード表示 -->
-        <div id="box-qr" class="bg-white p-10 rounded-[3rem] w-full max-w-sm text-center shadow-2xl hidden">
+        <div id="box-qr" class="bg-white p-10 rounded-[3rem] w-full max-sm:w-full max-w-sm text-center shadow-2xl hidden">
             <h3 class="font-black text-slate-800 mb-8 tracking-widest">QR CODE</h3>
             <div id="qrcode" class="flex justify-center mb-10 p-4 bg-white border border-slate-100 rounded-[2rem] shadow-inner"></div>
             <button onclick="closeModal()" class="w-full py-4 bg-slate-100 text-slate-500 rounded-2xl font-black">CLOSE</button>
@@ -229,7 +247,7 @@
         import { getFirestore, collection, addDoc, deleteDoc, doc, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
-        // --- Firebase Configuration (Provided by User) ---
+        // Firebase Configuration
         const firebaseConfig = {
             apiKey: "AIzaSyDPP8EoV98YtcS4QfQ7V-oUrTyxfnfEMQE",
             authDomain: "choshi-survey-2adae.firebaseapp.com",
@@ -253,21 +271,23 @@
         // 多言語辞書
         const i18n = {
             ja: {
-                title: "利用者アンケート", subtitle: "アプリ体験について教えてください。",
+                title: "利用者アンケート", subtitle: "ご意見をお聞かせください。",
                 q1: "1. 銚子の魅力や特徴について理解が深まりましたか？", q1min: "全く思わない", q1max: "非常に思う",
                 q2: "2. より深く「銚子のことを知りたい」と感じましたか？", q2min: "興味は変わらない", q2max: "強く興味を持った",
-                q3: "3. 今後も観光の際に、このアプリを使いたいですか？", q3min: "利用したくない", q3max: "ぜひ利用したい",
-                q4: "4. 旅行ガイド以外で、同様の機能を使いたいシーンは？", q4sub: "（例：ゴミ出し日、地域イベント情報など）", q4ph: "自由に入力してください",
-                q5: "5. その他、改善要望や機能のアイデアを教えてください", q5ph: "ご自由にご記入ください",
+                q3: "3. 今後も観光の際に、このアプリを継続して利用したいですか？", q3min: "利用したくない", q3max: "ぜひ利用したい",
+                q4: "4. このアプリは使いやすかったですか？", q4min: "使いにくい", q4max: "使いやすい",
+                q5: "5. 旅行ガイド以外で同様の機能を使いたいシーンはありますか？", q5sub: "（例：ゴミ出し日の案内、地域イベント情報など）", q5ph: "自由に入力してください",
+                q6: "6. その他、アプリへのご要望や「こんな機能があったら嬉しい」点はありますか？", q6ph: "ご自由にご記入ください",
                 btnSubmit: "答えを送信する", successTitle: "送信完了", successMsg: "貴重なご意見ありがとうございます。"
             },
             zh: {
                 title: "用户问卷调查", subtitle: "请告诉我们您的应用体验。",
-                q1: "1. 您对銚子的魅力和特点有更深的了解吗？", q1min: "完全不觉得", q1max: "非常觉得",
+                q1: "1. 通过这个应用，您对銚子的魅力和特点有更深的了解吗？", q1min: "完全不觉得", q1max: "非常觉得",
                 q2: "2. 您是否觉得想更深入地了解銚子？", q2min: "兴趣没变", q2max: "产生了浓厚兴趣",
                 q3: "3. 今后在旅游或观光时，您还想继续使用这个应用吗？", q3min: "不想使用", q3max: "非常想使用",
-                q4: "4. 除了旅游指南，您还有其他想使用类似功能的场景吗？", q4sub: "（例如：垃圾收集日、社区活动信息等）", q4ph: "请输入您的想法",
-                q5: "5. 其他改进建议或功能创意请告诉我们", q5ph: "请自由填写",
+                q4: "4. 这个应用好用吗？", q4min: "不好用", q4max: "好用",
+                q5: "5. 除了旅游指南，您还有其他想使用类似功能的场景吗？", q5sub: "（例如：垃圾收集日、社区活动信息等）", q5ph: "请输入您的想法",
+                q6: "6. 其他改进建议或功能创意请告诉我们。", q6ph: "请自由填写",
                 btnSubmit: "提交回答", successTitle: "提交成功", successMsg: "感谢您的宝贵意见。"
             },
             en: {
@@ -275,17 +295,19 @@
                 q1: "1. Did you gain a deeper understanding of Choshi's charms?", q1min: "Not at all", q1max: "Very much",
                 q2: "2. Did you feel like you wanted to know more about Choshi?", q2min: "No change", q2max: "Very interested",
                 q3: "3. Would you like to continue using this app in the future?", q3min: "No thanks", q3max: "Definitely",
-                q4: "4. Any other scenarios where you would like a similar function?", q4sub: "(e.g., Garbage collection days, local event info, etc.)", q4ph: "Enter your thoughts",
-                q5: "5. Please let us know if you have any other requests or ideas.", q5ph: "Feel free to write here",
-                btnSubmit: "Submit Response", successTitle: "Success!", successMsg: "Thank you for your feedback."
+                q4: "4. Was this app easy to use?", q4min: "Difficult", q4max: "Easy",
+                q5: "5. Any other scenarios where you would like a similar function?", q5sub: "(e.g., Garbage collection days, local event info, etc.)", q5ph: "Enter your thoughts",
+                q6: "6. Please let us know if you have any other requests or ideas.", q6ph: "Feel free to write here",
+                btnSubmit: "Submit Response", successTitle: "Success", successMsg: "Thank you for your feedback."
             },
             ko: {
                 title: "이용자 설문조사", subtitle: "앱 경험에 대해 알려주세요.",
                 q1: "1. 쵸시의 매력과 특징에 대해 이해가 깊어졌습니까?", q1min: "전혀 그렇지 않다", q1max: "매우 그렇다",
                 q2: "2. 쵸시에 대해 더 자세히 알고 싶다고 느끼셨습니까?", q2min: "변함 없다", q2max: "매우 관심 있다",
                 q3: "3. 향후 관광 시에도 이 앱을 계속 사용하고 싶습니까?", q3min: "사용하고 싶지 않다", q3max: "꼭 사용하고 싶다",
-                q4: "4. 여행 가이드 외에 비슷한 기능을 사용하고 싶은 상황이 있습니까?", q4sub: "(예: 쓰레기 배출일, 지역 이벤트 정보 등)", q4ph: "자유롭게 입력해 주세요",
-                q5: "5. 기타 개선 요청이나 기능 아이디어를 알려주세요", q5ph: "자ゆ롭게 작성해 주세요",
+                q4: "4. 이 앱은 사용하기 편리했습니까?", q4min: "불편했다", q4max: "편리했다",
+                q5: "5. 여행 가이드 외에 비슷한 기능을 사용하고 싶은 상황이 있습니까?", q5sub: "(예: 쓰레기 배출일, 지역 이벤트 정보 등)", q5ph: "자유롭게 입력해 주세요",
+                q6: "6. 기타 개선 요청이나 기능 아이디어를 알려주세요.", q6ph: "자유롭게 작성해 주세요",
                 btnSubmit: "답변 제출하기", successTitle: "제출 완료", successMsg: "귀중한 의견 감사합니다."
             }
         };
@@ -305,10 +327,13 @@
             document.getElementById('txt-q3-min').innerText = t.q3min;
             document.getElementById('txt-q3-max').innerText = t.q3max;
             document.getElementById('txt-q4').innerText = t.q4;
-            document.getElementById('txt-q4-sub').innerText = t.q4sub;
-            document.getElementById('q4').placeholder = t.q4ph;
+            document.getElementById('txt-q4-min').innerText = t.q4min;
+            document.getElementById('txt-q4-max').innerText = t.q4max;
             document.getElementById('txt-q5').innerText = t.q5;
+            document.getElementById('txt-q5-sub').innerText = t.q5sub;
             document.getElementById('q5').placeholder = t.q5ph;
+            document.getElementById('txt-q6').innerText = t.q6;
+            document.getElementById('q6').placeholder = t.q6ph;
             document.getElementById('txt-btn-submit').innerText = t.btnSubmit;
             document.getElementById('txt-success-title').innerText = t.successTitle;
             document.getElementById('txt-success-msg').innerText = t.successMsg;
@@ -317,7 +342,7 @@
             document.getElementById('view-survey').classList.remove('hidden');
         };
 
-        // Firebase 認証
+        // Firebase Auth
         const init = async () => {
             try {
                 await signInAnonymously(auth);
@@ -337,25 +362,26 @@
         function renderAdminUI(data) {
             const count = data.length;
             document.getElementById('stat-count').innerText = count;
-            let sums = { q1: 0, q2: 0, q3: 0 };
+            let sums = { q1: 0, q2: 0, q3: 0, q4: 0 };
             data.forEach(d => {
-                sums.q1 += Number(d.q1);
-                sums.q2 += Number(d.q2);
-                sums.q3 += Number(d.q3);
+                sums.q1 += Number(d.q1 || 0);
+                sums.q2 += Number(d.q2 || 0);
+                sums.q3 += Number(d.q3 || 0);
+                sums.q4 += Number(d.q4 || 0);
             });
-            ['q1', 'q2', 'q3'].forEach(k => {
+            ['q1', 'q2', 'q3', 'q4'].forEach(k => {
                 const avg = count > 0 ? (sums[k] / count).toFixed(1) : "0.0";
                 document.getElementById(`avg-${k}`).innerText = avg;
                 document.getElementById(`bar-${k}`).style.width = `${avg * 10}%`;
             });
 
             const list = document.getElementById('admin-list');
-            if (count === 0) { list.innerHTML = '<p class="text-center text-slate-300 py-10 font-bold">まだデータがありません</p>'; return; }
+            if (count === 0) { list.innerHTML = '<p class="text-center text-slate-300 py-10 font-bold">まだ回答データがありません</p>'; return; }
             
             list.innerHTML = data.map(d => {
                 const date = d.timestamp ? new Date(d.timestamp.toDate()).toLocaleString('ja-JP') : '不明';
                 return `
-                <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm relative group animate-in slide-in-from-bottom-2">
+                <div class="bg-white p-6 rounded-[2rem] border border-slate-100 shadow-sm relative animate-in slide-in-from-bottom-2">
                     <div class="flex justify-between items-start mb-4">
                         <div class="flex flex-col">
                             <span class="text-[10px] text-sky-600 font-black uppercase tracking-widest">${date}</span>
@@ -363,14 +389,15 @@
                         </div>
                         <button onclick="trash('${d.id}')" class="text-red-400 text-xs font-black border-2 border-red-50 px-3 py-1 rounded-xl hover:bg-red-50 transition-colors">廃棄</button>
                     </div>
-                    <div class="grid grid-cols-3 gap-3 mb-4 text-center">
-                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black">Q1</div><div class="font-black text-lg">${d.q1}</div></div>
-                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black">Q2</div><div class="font-black text-lg">${d.q2}</div></div>
-                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black">Q3</div><div class="font-black text-lg">${d.q3}</div></div>
+                    <div class="grid grid-cols-4 gap-2 mb-4 text-center">
+                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black uppercase">Q1.理解</div><div class="font-black text-lg">${d.q1}</div></div>
+                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black uppercase">Q2.興味</div><div class="font-black text-lg">${d.q2}</div></div>
+                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black uppercase">Q3.利用</div><div class="font-black text-lg">${d.q3}</div></div>
+                        <div class="bg-sky-50 py-2 rounded-2xl"><div class="text-[8px] text-sky-400 font-black uppercase">Q4.操作</div><div class="font-black text-lg">${d.q4}</div></div>
                     </div>
                     <div class="space-y-2 text-sm text-slate-600 font-medium">
-                        ${d.q4 ? `<div class="p-3 bg-slate-50 rounded-2xl leading-relaxed"><b>Q4:</b> ${d.q4}</div>` : ''}
-                        ${d.q5 ? `<div class="p-3 bg-slate-50 rounded-2xl leading-relaxed"><b>Q5:</b> ${d.q5}</div>` : ''}
+                        ${d.q5 ? `<div class="p-3 bg-slate-50 rounded-2xl leading-relaxed"><b class="text-[9px] text-slate-400 block mb-1 uppercase">Q5. 他シーン</b>${d.q5}</div>` : ''}
+                        ${d.q6 ? `<div class="p-3 bg-slate-50 rounded-2xl leading-relaxed"><b class="text-[9px] text-slate-400 block mb-1 uppercase">Q6. 自由意見</b>${d.q6}</div>` : ''}
                     </div>
                 </div>`;
             }).join('');
@@ -385,9 +412,14 @@
             const btn = document.getElementById('submitBtn');
             btn.disabled = true; btn.innerHTML = '<div class="loading-spinner"></div>';
             const payload = {
-                q1: document.getElementById('q1').value, q2: document.getElementById('q2').value, q3: document.getElementById('q3').value,
-                q4: document.getElementById('q4').value, q5: document.getElementById('q5').value,
-                lang: currentLang, timestamp: serverTimestamp()
+                q1: document.getElementById('q1').value, 
+                q2: document.getElementById('q2').value, 
+                q3: document.getElementById('q3').value,
+                q4: document.getElementById('q4').value,
+                q5: document.getElementById('q5').value, 
+                q6: document.getElementById('q6').value,
+                lang: currentLang, 
+                timestamp: serverTimestamp()
             };
             try {
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'responses'), payload);
